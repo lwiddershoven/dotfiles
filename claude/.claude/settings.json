@@ -4,6 +4,7 @@
   "showThinkingSummaries": true,
   "cleanupPeriodDays": 7,
   "includeCoAuthoredBy": false,
+  "editorMode": "vim",
   "tui": "fullscreen",
 
   "env": {
@@ -16,6 +17,13 @@
     "skill-creator@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
     "context7@claude-plugins-official": true
+  },
+    "hooks": {
+      "Notification": [
+        {
+          "hooks": [{ "type": "command", "command": "afplay /System/Library/Sounds/Glass.aiff" }]
+        }
+    ]
   },
   "permissions": {
     "defaultMode": "acceptEdits",

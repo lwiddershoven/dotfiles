@@ -1,39 +1,18 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "alwaysThinkingEnabled": true,
-  "showThinkingSummaries": true,
   "cleanupPeriodDays": 7,
-  "includeCoAuthoredBy": false,
-  "editorMode": "vim",
-  "tui": "fullscreen",
-
   "env": {
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
     "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "65536"
   },
-  "enabledPlugins": {
-    "claude-md-management@claude-plugins-official": true,
-    "frontend-design@claude-plugins-official": false,
-    "skill-creator@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true,
-    "context7@claude-plugins-official": true
-  },
-    "hooks": {
-      "Notification": [
-        {
-          "hooks": [{ "type": "command", "command": "afplay /System/Library/Sounds/Glass.aiff" }]
-        }
-    ]
-  },
+  "includeCoAuthoredBy": false,
   "permissions": {
-    "defaultMode": "acceptEdits",
     "allow": [
       "Bash(npm run lint)",
       "Bash(npm run test)",
       "Bash(npm run build)",
       "Bash(mvn:*)",
       "Bash(git:*)",
-
       "mcp__context7__*",
       "mcp__github__get_issue",
       "mcp__github__get_pull_request",
@@ -53,7 +32,6 @@
       "Bash(ssh:*)",
       "Bash(rm -rf:*)",
       "Bash(rm -fr:*)",
-
       "Read(**/.env)",
       "Read(**/.env.*)",
       "Read(**/credentials.json)",
@@ -69,17 +47,36 @@
       "Read(~/.npmrc)",
       "Read(~/.npm/**)",
       "Read(~/.pypirc)",
-
       "mcp__postgres__drop_*",
       "mcp__github__delete_*",
       "mcp__github__push_files",
       "mcp__postgres__execute"
+    ],
+    "defaultMode": "acceptEdits"
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "afplay /System/Library/Sounds/Glass.aiff"
+          }
+        ]
+      }
     ]
   },
   "statusLine": {
     "type": "command",
     "command": "ccstatusline",
     "padding": 0
+  },
+  "enabledPlugins": {
+    "claude-md-management@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": false,
+    "skill-creator@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "context7@claude-plugins-official": true
   },
   "sandbox": {
     "enabled": true,
@@ -98,11 +95,16 @@
     "filesystem": {
       "allowWrite": [
         "/var/folders",
+        "/tmp",
         "~/.m2/repository"
       ],
       "denyWrite": [
         "./.env"
       ]
     }
-  }
+  },
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "medium",
+  "showThinkingSummaries": true,
+  "editorMode": "vim"
 }

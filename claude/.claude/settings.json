@@ -94,6 +94,7 @@
     "allowUnsandboxedCommands": false,
     "network": {
       "allowedDomains": [
+        "api.anthropic.com",
         "github.io",
         "api.github.com",
         "raw.githubusercontent.com",

@@ -95,6 +95,7 @@
     "network": {
       "allowedDomains": [
         "api.anthropic.com",
+        "mcp-proxy.anthropic.com",
         "github.io",
         "api.github.com",
         "raw.githubusercontent.com",
@@ -104,6 +105,7 @@
         "eclipse.dev",
         "repo.eclipse.org",
         "quarkus.io",
+        "registry.npmjs.org",
         "*.upstash.io"
       ]
     },
@@ -115,6 +117,10 @@
       ],
       "denyWrite": [
         "./.env"
+      ],
+      "allowRead": [
+        ".",
+        "~/.claude"
       ]
     }
   },

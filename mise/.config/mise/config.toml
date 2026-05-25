@@ -7,7 +7,7 @@ java                = "openjdk-25"
 maven               = "3.9.14"
 quarkus             = "3.33"
 python              = "3.14"
-"npm:ccstatusline"  = "2.2.7"
+"npm:ccstatusline"  = "2.2.19"
 "npm:@fission-ai/openspec" = "latest"
 "uv"                = "0.11.6"
 

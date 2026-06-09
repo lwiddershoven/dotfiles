@@ -11,12 +11,14 @@ brew "fzf"                              # Command-line fuzzy finder
 brew "ffmpeg"                           # Record, convert and stream audio and video
 brew "gh"                               # GitHub command-line tool
 brew "gnupg"                            # GNU Privacy Guard (OpenPGP)
+brew "graphviz"                         # Graph visualization software from AT&T and Bell Labs
 brew "httpie"                           # curl replacement for humans
 brew "htop"                             # Improved top (interactive process viewer)
 brew "jq"                               # JSON processing
 brew "mactop"                           # Hardware monitor with TUI
 brew "mas"                              # Mac App Store CLI
 brew "mise"                             # Polyglot runtime manager
+brew "mkdocs"                           # Project documentation with Markdown
 brew "pandoc"                           # Swiss-army knife of markup format conversion
 brew "ripgrep"                          # Search tool like grep and The Silver Searcher
 brew "starship"                         # Cross-shell prompt for astronauts
@@ -25,6 +27,7 @@ brew "tlrc"                             # Official tldr client written in Rust
 brew "wget"                             # Internet file retriever
 brew "yq"                               # YAML processing
 brew "ollama"                           # Create, run, and share large language models (LLMs)
+brew "xmlsec1"                          # XML security library
 brew "zoxide"                           # smarter cd
 brew "zsh-autosuggestions"              # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-syntax-highlighting"          # Fish shell like syntax highlighting for zsh

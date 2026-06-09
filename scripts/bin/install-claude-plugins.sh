@@ -60,12 +60,14 @@ install_claude_plugin() {
   fi
 }
 
+add_claude_marketplace anthropics/skills
+add_claude_marketplace JuliusBrussee/caveman
+
 install_claude_plugin claude-md-management
 install_claude_plugin context7
 install_claude_plugin frontend-design
 install_claude_plugin skill-creator
 install_claude_plugin superpowers
-add_claude_marketplace JuliusBrussee/caveman
 install_claude_plugin caveman
 
 # ── Disable infrequently used plugins ─────────────────────────────────────────

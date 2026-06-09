@@ -88,6 +88,12 @@
         "source": "github",
         "repo": "JuliusBrussee/caveman"
       }
+    },
+    "anthropic-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/skills"
+      }
     }
   },
   "sandbox": {

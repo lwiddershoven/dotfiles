@@ -55,10 +55,10 @@ install_claude_plugin() {
   if [[ -n "$installed" ]]; then
     info "Updating Claude plugin: ${plugin}..."
     claude plugin update "${plugin}"
+  else
+    info "Installing Claude plugin: ${plugin}..."
+    claude plugin install "${plugin}"
   fi
-
-  info "Installing Claude plugin: ${plugin}..."
-  claude plugin install "${plugin}"
 }
 
 add_claude_marketplace anthropics/skills
@@ -82,7 +82,7 @@ disable_claude_plugin() {
   local plugin="$1"
   local enabled
   enabled=$(claude plugin list --json | jq -r --arg name "$plugin" \
-    '.[] | select(.id | startswith($name + "@")) | .enabled')
+      '.[] | select(.id | startswith($name + "@")) | .enabled')
 
   if [[ "$enabled" == "true" ]]; then
     info "Disabling Claude plugin: ${plugin}..."
@@ -95,6 +95,32 @@ disable_claude_plugin() {
 }
 
 disable_claude_plugin frontend-design
+
+# ── Install skills ────────────────────────────────────────────────────────────
+
+divider
+info "Installing skills..."
+
+install_claude_skill() {
+  local pkg="$1"
+  local skill="$2"
+  installed=$(npx skills@latest ls -g --json | jq -r --arg name "$skill" \
+      '.[] | select(.name == $name) | .name')
+
+  if [[ -n "$installed" ]]; then
+    info "Updating skill: ${skill}..."
+    npx skills@latest update "${skill}" > /dev/null
+  else
+    info "Installing skill: ${pkg} ${skill}..."
+    npx skills@latest add "${pkg}" -g -y --agent claude-code --skill "${skill}" > /dev/null
+  fi
+}
+
+install_claude_skill mattpocock/skills domain-modeling
+install_claude_skill mattpocock/skills grill-me
+install_claude_skill mattpocock/skills grilling
+install_claude_skill mattpocock/skills grill-with-docs
+install_claude_skill mattpocock/skills handoff
 
 # ── List installed plugins ────────────────────────────────────────────────────
 
@@ -109,6 +135,13 @@ divider
 info "Installed MCP servers:"
 
 claude mcp list | tail +2
+
+# ── List installed skills ──────────────────────────────────────────────────────
+
+divider
+info "Installed skills:"
+
+npx skills@latest ls -g | tail +2
 
 # ── Done ──────────────────────────────────────────────────────────────────────
 

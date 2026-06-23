@@ -87,7 +87,7 @@ on top of the pre-bundled features.
 
 - [Claude Code](https://claude.ai/code) (requires subscription) is installed via Homebrew.
 - Claude Code settings (`.claude/settings.json`) are managed via Stow.
-- Run `~/bin/install-claude-plugins.sh` to install Claude plugins
+- Run `~/bin/install-claude-plugins.sh` to install Claude plugins and skills
 
 ### Claude Code statusline
 

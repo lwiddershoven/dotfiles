@@ -14,14 +14,23 @@
       "Bash(npm run build)",
       "Bash(mvn:*)",
       "Bash(git:*)",
-      "mcp__context7__*",
+      "mcp__plugin_context7__*",
       "mcp__github__get_issue",
       "mcp__github__get_pull_request",
       "mcp__github__list_issues",
       "mcp__github__list_pull_requests",
       "mcp__github__create_issue",
       "mcp__github__add_issue_comment",
-      "mcp__postgres__query"
+      "mcp__postgres__query",
+
+      "WebSearch",
+      "WebFetch(domain:eclipse.dev)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:gitlab.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:maven.org)",
+      "WebFetch(domain:linkml.io)",
+      "Skill(*)"
     ],
     "deny": [
       "Bash(mvn deploy)",

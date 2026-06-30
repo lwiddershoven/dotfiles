@@ -104,15 +104,15 @@ info "Installing skills..."
 install_claude_skill() {
   local pkg="$1"
   local skill="$2"
-  installed=$(npx skills@latest ls -g --json | jq -r --arg name "$skill" \
+  installed=$(npx --yes skills@latest ls -g --json | jq -r --arg name "$skill" \
       '.[] | select(.name == $name) | .name')
 
   if [[ -n "$installed" ]]; then
     info "Updating skill: ${skill}..."
-    npx skills@latest update "${skill}" > /dev/null
+    npx --yes skills@latest update "${skill}" > /dev/null
   else
     info "Installing skill: ${pkg} ${skill}..."
-    npx skills@latest add "${pkg}" -g -y --agent claude-code --skill "${skill}" > /dev/null
+    npx --yes skills@latest add "${pkg}" -g -y --agent claude-code --skill "${skill}" > /dev/null
   fi
 }
 
@@ -121,6 +121,7 @@ install_claude_skill mattpocock/skills grill-me
 install_claude_skill mattpocock/skills grilling
 install_claude_skill mattpocock/skills grill-with-docs
 install_claude_skill mattpocock/skills handoff
+install_claude_skill mattpocock/skills teach
 
 install_claude_skill casparderksen/skills adr-writer
 install_claude_skill casparderksen/skills java

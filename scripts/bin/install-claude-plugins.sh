@@ -36,7 +36,7 @@ add_claude_marketplace() {
   local repo="$1"
   local installed
   installed=$(claude plugin marketplace list --json | jq -r --arg repo "$repo" \
-    '.[] | select(.repo == $repo) | .repo')
+      '.[] | select(.repo == $repo) | .repo')
 
   if [[ -n "$installed" ]]; then
     info "Claude marketplace already added: ${repo}"
@@ -50,7 +50,7 @@ install_claude_plugin() {
   local plugin="$1"
   local installed
   installed=$(claude plugin list --json | jq -r --arg name "$plugin" \
-    '.[] | select(.id | startswith($name + "@")) | .id')
+      '.[] | select(.id == $name) | .id')
 
   if [[ -n "$installed" ]]; then
     info "Updating Claude plugin: ${plugin}..."

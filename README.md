@@ -5,6 +5,12 @@ Automated, reproducible macOS developer setup targeting full-stack development w
 
 ## Quickstart
 
+Install the preconditions:
+```
+# git so you can check out this repo. 
+xcode-select --install  # for git, pops up a window, takes forever to install
+```
+
 Clone this repository:
 ```console
 $ git clone https://github.com/casparderksen/dotfiles.git ~/.dotfiles

@@ -1,6 +1,7 @@
 # Brewfile
 
 brew "ansible"                          # Automate deployment, configuration, and upgrading
+brew "zed"                              # fast simple editor
 brew "bat"                              # cat with syntax highlighting
 brew "dash"                             # API documentation browser and code snippet manager
 brew "delta"                            # Syntax-highlighting pager for git and diff output

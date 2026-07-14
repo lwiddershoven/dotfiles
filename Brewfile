@@ -11,6 +11,8 @@ brew "fd"                               # find replacement
 brew "fzf"                              # Command-line fuzzy finder
 brew "ffmpeg"                           # Record, convert and stream audio and video
 brew "gh"                               # GitHub command-line tool
+brew "glab"                             # gitlab cli
+brew "glow"                             # render markdown on the terminal
 brew "gnupg"                            # GNU Privacy Guard (OpenPGP)
 brew "graphviz"                         # Graph visualization software from AT&T and Bell Labs
 brew "httpie"                           # curl replacement for humans

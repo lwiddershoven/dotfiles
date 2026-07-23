@@ -24,6 +24,7 @@ brew "mas"                              # Mac App Store CLI
 brew "mise"                             # Polyglot runtime manager
 brew "mkdocs"                           # Project documentation with Markdown
 brew "pandoc"                           # Swiss-army knife of markup format conversion
+brew "plantuml"                         # Text-based UML diagrams
 brew "ripgrep"                          # Search tool like grep and The Silver Searcher
 brew "starship"                         # Cross-shell prompt for astronauts
 brew "stow"                             # Organize software neatly under a single directory tree

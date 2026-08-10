@@ -36,6 +36,7 @@ brew "xmlsec1"                          # XML security library
 brew "zoxide"                           # smarter cd
 brew "zsh-autosuggestions"              # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-syntax-highlighting"          # Fish shell like syntax highlighting for zsh
+brew "git-credential-manager"
 
 cask "claude"                           # Anthropic's official Claude AI desktop app
 cask "claude-code"                      # Terminal-based AI coding assistant (requires license)

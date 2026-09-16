@@ -6,7 +6,7 @@ brew "zed"                              # fast simple editor
 brew "dash"                             # API documentation browser and code snippet manager
 brew "delta"                            # Syntax-highlighting pager for git and diff output
 brew "direnv"                           # Load/unload environment variables based on $PWD
-# brew "eza"                              # modern ls replacement
+brew "eza"                              # modern ls replacement - aliased to ls
 brew "fd"                               # find replacement
 brew "fzf"                              # Command-line fuzzy finder
 brew "ffmpeg"                           # Record, convert and stream audio and video

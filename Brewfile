@@ -26,14 +26,14 @@ brew "mkdocs"                           # Project documentation with Markdown
 brew "pandoc"                           # Swiss-army knife of markup format conversion
 brew "plantuml"                         # Text-based UML diagrams
 # brew "ripgrep"                          # Search tool like grep and The Silver Searcher
-# brew "starship"                         # Cross-shell prompt for astronauts
+brew "starship"                         # Cross-shell prompt for astronauts
 brew "stow"                             # Organize software neatly under a single directory tree
 # brew "tlrc"                             # Official tldr client written in Rust
 brew "wget"                             # Internet file retriever
 brew "yq"                               # YAML processing
 brew "ollama"                           # Create, run, and share large language models (LLMs)
 brew "xmlsec1"                          # XML security library
-# brew "zoxide"                           # smarter cd
+brew "zoxide"                           # smarter cd
 brew "zsh-autosuggestions"              # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-syntax-highlighting"          # Fish shell like syntax highlighting for zsh
 brew "git-credential-manager"
